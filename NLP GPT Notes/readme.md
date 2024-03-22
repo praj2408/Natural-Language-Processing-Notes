@@ -122,6 +122,26 @@ The Bag of Words (BoW) model is a simple and commonly used technique in natural 
 
 In summary, the Bag of Words model is a straightforward approach for representing text data as numerical vectors based on word frequencies. While it has limitations, it remains a valuable technique in the field of natural language processing, particularly for tasks where the order of words is less important than their frequencies.
 
+## BOW vs CBOW
+Bag-of-Words (BoW) and Continuous Bag-of-Words (CBOW) are both models used in natural language processing, particularly in the context of word embeddings and language modeling. They serve different purposes and have different architectures:
+
+Bag-of-Words (BoW):
+
+BoW is a simple and commonly used model for representing text data.
+It treats each document or sentence as a collection of words, ignoring grammar and word order.
+In BoW, a document is represented as a vector where each element corresponds to the frequency of a particular word in the document.
+BoW is typically used for tasks like document classification, information retrieval, and sentiment analysis.
+Continuous Bag-of-Words (CBOW):
+
+CBOW is a neural network-based model used for generating word embeddings.
+Unlike BoW, CBOW considers the context of words by predicting a target word based on its surrounding context words.
+In CBOW, the model takes a fixed window of context words as input and predicts the target word in the center of this window.
+CBOW is trained to maximize the probability of predicting the target word given its context words.
+Once trained, the hidden layer of the CBOW model, which represents word embeddings, can be used for various downstream NLP tasks like word similarity, named entity recognition, and machine translation.
+In summary, while BoW is a simple and straightforward method for representing text data based on word frequencies, CBOW is a neural network-based model that captures word semantics by considering the context in which words appear. Both approaches have their own strengths and weaknesses and are suitable for different types of tasks in natural language processing.
+
+
+
 
 ## Euclidian distance and its alternatives
 Euclidean distance is a measure of the straight-line distance between two points in Euclidean space. In machine learning, it's commonly used as a distance metric for comparing the similarity between data points. Let's delve into Euclidean distance and some of its alternatives used in machine learning:
