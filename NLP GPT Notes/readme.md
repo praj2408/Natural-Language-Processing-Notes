@@ -230,3 +230,29 @@ TF-IDF stands for Term Frequency-Inverse Document Frequency. It's a statistical 
    - Text Classification: TF-IDF scores can serve as features for machine learning models in tasks like sentiment analysis, spam detection, and topic classification.
 
 Overall, TF-IDF is a powerful technique for extracting meaningful information from text data by weighing the importance of terms based on their frequency and uniqueness across a corpus. It helps in identifying key terms that are highly relevant to individual documents while filtering out common terms that offer little discriminatory power.
+
+
+
+
+# Word2Vec
+Word2Vec is a popular technique used in natural language processing (NLP) and is particularly famous for its ability to represent words in a numerical format which captures their semantic meanings. This numerical representation is extremely useful in various NLP tasks like text classification, sentiment analysis, and machine translation.
+
+Now, imagine you have a large corpus of text, like a collection of news articles or books. Each word in this corpus is associated with a unique numerical vector through the Word2Vec model. This vector has a specific length, say 100 or 300 dimensions, depending on how you configure the model.
+
+The magic of Word2Vec lies in how it learns these vector representations. There are two main approaches: Continuous Bag of Words (CBOW) and Skip-gram.
+
+1. **Continuous Bag of Words (CBOW)**:
+   - CBOW works by predicting the target word based on its context, i.e., the surrounding words.
+   - For instance, given the sentence "The cat sits on the mat", if we're predicting the word "sits", the context words might be "The", "cat", "on", and "the". 
+   - CBOW aims to predict "sits" based on "The", "cat", "on", and "the".
+
+2. **Skip-gram**:
+   - Skip-gram does the opposite of CBOW. It tries to predict the context words given a target word.
+   - Using the same example sentence "The cat sits on the mat", if we're predicting the context words for the target word "sits", they might be "The", "cat", "on", and "the".
+   - Skip-gram aims to predict "The", "cat", "on", and "the" based on "sits".
+
+Once the model is trained on a large corpus of text using either CBOW or Skip-gram, it learns to represent words in such a way that similar words have similar vectors. For example, the vectors for "king" and "queen" might be close to each other in the vector space because they often appear in similar contexts.
+
+This property allows us to perform interesting operations with words represented as vectors. For example, we can find analogies like "king - man + woman = queen", which is essentially saying "take the concept of 'king', remove the concept of 'man', add the concept of 'woman', and you get 'queen'".
+
+In summary, Word2Vec is a powerful tool in NLP that transforms words into numerical vectors, capturing semantic relationships between words, and enabling various language-related tasks.
