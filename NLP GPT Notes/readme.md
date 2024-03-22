@@ -90,6 +90,39 @@ Then, we represent each document using a bag-of-words approach:
 These numerical representations can then be used as input for machine learning algorithms to perform various NLP tasks.
 
 
+
+
+
+# Bag of Words
+The Bag of Words (BoW) model is a simple and commonly used technique in natural language processing (NLP) for representing text data. It's based on the idea that the order of words in a document can be disregarded, and only their frequencies matter. Here's how the Bag of Words model works:
+
+1. **Tokenization**:
+   - The first step in creating a Bag of Words model is to tokenize the text. Tokenization involves breaking down the text into individual words or tokens.
+
+2. **Vocabulary Construction**:
+   - Next, the model constructs a vocabulary, which is a list of unique words present in the corpus (collection of documents). Each word in the vocabulary serves as a feature.
+
+3. **Vectorization**:
+   - Once the vocabulary is constructed, each document in the corpus is represented as a numerical vector.
+   - The length of the vector is equal to the size of the vocabulary, and each element of the vector corresponds to the frequency of a word in the document.
+   - If a word from the vocabulary occurs in the document, its corresponding element in the vector is set to the frequency of that word. If the word does not occur in the document, its frequency is set to 0.
+
+4. **Example**:
+   - Consider a simple corpus consisting of two documents:
+     - Document 1: "The quick brown fox jumps over the lazy dog."
+     - Document 2: "The lazy dog sleeps in the sun."
+   - The vocabulary for this corpus might include: ["The", "quick", "brown", "fox", "jumps", "over", "lazy", "dog", "sleeps", "in", "sun"].
+   - Document 1 would be represented as the vector [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0].
+   - Document 2 would be represented as the vector [1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1].
+
+5. **Applications**:
+   - The Bag of Words model is often used as a feature extraction technique for text classification, sentiment analysis, document clustering, and other NLP tasks.
+   - It's simple and computationally efficient, making it suitable for large-scale text processing tasks.
+   - However, the Bag of Words model ignores the semantic relationships between words and does not capture the order of words in a document, which can limit its effectiveness for tasks requiring understanding of context or meaning.
+
+In summary, the Bag of Words model is a straightforward approach for representing text data as numerical vectors based on word frequencies. While it has limitations, it remains a valuable technique in the field of natural language processing, particularly for tasks where the order of words is less important than their frequencies.
+
+
 ## Euclidian distance and its alternatives
 Euclidean distance is a measure of the straight-line distance between two points in Euclidean space. In machine learning, it's commonly used as a distance metric for comparing the similarity between data points. Let's delve into Euclidean distance and some of its alternatives used in machine learning:
 
